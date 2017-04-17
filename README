@@ -1,7 +1,7 @@
 ==============欢迎使用数据库DML操作的反转程序==============
 说明：
     此程序只支持 DML 操作， 不支持 DDL 操作
-    tmp 目录存放分析后的binlog文件
+    tmp 目录存放分析前后的binlog文件
     bin 目录存放主脚本
     core 目录存放所有的逻辑实现脚本
     etc 配置文件存放位置
@@ -14,7 +14,7 @@ python 版本：
     直接到bin下，给PYbinlog.py 添加可执行权限，直接运行就好
 
 恢复的前提条件：
-1. 分析出一个时间段内的binlog 文件， 可读文件
+1. 分析出一个时间段内的binlog 可读文件，存放到 tmp 目录下
     e.g:
         mysqlbinlog -v -v --base64-output=decode-rows mysql-bin.000001 --start_datetime='2016-09-22 12:30:00' | grep xxx
         mysqlbinlog -v -v --base64-output=decode-rows mysql-bin.000001 --start_position=8000 |grep xxx
