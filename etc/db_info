@@ -1,9 +1,9 @@
 [source_database]
 host='192.168.1.98'
-user='shanjin'
-passwd='asdfsddY'
+user='root'
+passwd='123456'
 port='3306'
-database_name='shanjin'
+database_name='admin'
 table_name='coupon_record'
 dml_type='delete'
 binlog_file='../tmp/aaa.sql'
